@@ -112,6 +112,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="App_Config\Include\SitecoreDev\SitecoreDev.CustomFields.config" />
+    <Content Include="App_Config\Include\SitecoreDev\SItecoreDev.TokenReplacements.config" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -130,6 +131,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tokens\ParentPathTokenProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
