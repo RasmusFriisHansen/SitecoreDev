@@ -125,6 +125,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Custom\Fields\CreditCard.cs" />
+    <Compile Include="Custom\Validators\SsnValidator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
