@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Web", "SitecoreDev.Web\SitecoreDev.Web.csproj", "{FB632DBC-50E3-4C61-AA3F-FCDE18F859E9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{23BE7202-1BBA-4BC2-BBCE-4ED8C412D0F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore", "Sitecore", "{A58BBF8C-46C4-4D73-B1B2-390DB36D75CB}"
@@ -13,22 +11,66 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore", "Sitecore", "{A5
 		..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Mvc.dll = ..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Mvc.dll
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{86F1F477-9B20-4963-88F2-B81B41CDECF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{DB87301D-B213-48E5-B0EB-E20FAD6F749C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{F8FA8853-987D-4CB6-A97C-34759BB477C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{88665A5F-44CD-4E73-9E0C-2CFB872330B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreDev", "SitecoreDev", "{D753DD9A-E110-4531-9C98-047F225A5A53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Website", "Project\SitecoreDev\SitecoreDev.Website\SitecoreDev.Website.csproj", "{4D9AC9CC-FC9F-4D2C-8E69-C0D1D618EE44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreExtensions", "SitecoreExtensions", "{371F872D-735D-4E8B-95F2-226FF984A1A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Foundation.SitecoreExtensions", "Foundation\SitecoreExtensions\SitecoreDev.Foundation.SitecoreExtensions\SitecoreDev.Foundation.SitecoreExtensions.csproj", "{2383BA61-DCD5-4A1A-BEB4-EA2FD99E27D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Styles", "Styles", "{34C6990C-E3EB-4C6B-99C5-F580EABA9B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Foundation.Styles", "Foundation\Styles\SitecoreDev.Foundation.Styles\SitecoreDev.Foundation.Styles.csproj", "{19B06C3F-ABBE-4C37-B8D8-266CF7BEB1F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Media", "Media", "{8FE756C5-CD4D-4029-AF90-984971802050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Feature.Media", "Feature\Media\SitecoreDev.Feature.Media\SitecoreDev.Feature.Media.csproj", "{85782CF3-02DD-4281-9EFF-AF951BBAFE71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB632DBC-50E3-4C61-AA3F-FCDE18F859E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB632DBC-50E3-4C61-AA3F-FCDE18F859E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB632DBC-50E3-4C61-AA3F-FCDE18F859E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB632DBC-50E3-4C61-AA3F-FCDE18F859E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D9AC9CC-FC9F-4D2C-8E69-C0D1D618EE44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9AC9CC-FC9F-4D2C-8E69-C0D1D618EE44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9AC9CC-FC9F-4D2C-8E69-C0D1D618EE44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9AC9CC-FC9F-4D2C-8E69-C0D1D618EE44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2383BA61-DCD5-4A1A-BEB4-EA2FD99E27D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2383BA61-DCD5-4A1A-BEB4-EA2FD99E27D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2383BA61-DCD5-4A1A-BEB4-EA2FD99E27D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2383BA61-DCD5-4A1A-BEB4-EA2FD99E27D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B06C3F-ABBE-4C37-B8D8-266CF7BEB1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B06C3F-ABBE-4C37-B8D8-266CF7BEB1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B06C3F-ABBE-4C37-B8D8-266CF7BEB1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B06C3F-ABBE-4C37-B8D8-266CF7BEB1F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85782CF3-02DD-4281-9EFF-AF951BBAFE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85782CF3-02DD-4281-9EFF-AF951BBAFE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85782CF3-02DD-4281-9EFF-AF951BBAFE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85782CF3-02DD-4281-9EFF-AF951BBAFE71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A58BBF8C-46C4-4D73-B1B2-390DB36D75CB} = {23BE7202-1BBA-4BC2-BBCE-4ED8C412D0F0}
+		{D753DD9A-E110-4531-9C98-047F225A5A53} = {88665A5F-44CD-4E73-9E0C-2CFB872330B3}
+		{4D9AC9CC-FC9F-4D2C-8E69-C0D1D618EE44} = {D753DD9A-E110-4531-9C98-047F225A5A53}
+		{371F872D-735D-4E8B-95F2-226FF984A1A4} = {F8FA8853-987D-4CB6-A97C-34759BB477C5}
+		{2383BA61-DCD5-4A1A-BEB4-EA2FD99E27D3} = {371F872D-735D-4E8B-95F2-226FF984A1A4}
+		{34C6990C-E3EB-4C6B-99C5-F580EABA9B9A} = {F8FA8853-987D-4CB6-A97C-34759BB477C5}
+		{19B06C3F-ABBE-4C37-B8D8-266CF7BEB1F5} = {34C6990C-E3EB-4C6B-99C5-F580EABA9B9A}
+		{8FE756C5-CD4D-4029-AF90-984971802050} = {DB87301D-B213-48E5-B0EB-E20FAD6F749C}
+		{85782CF3-02DD-4281-9EFF-AF951BBAFE71} = {8FE756C5-CD4D-4029-AF90-984971802050}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C824447-3A3F-478D-B9D6-185F4AC98334}
