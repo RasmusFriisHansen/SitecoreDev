@@ -1,21 +1,23 @@
-﻿using Sitecore;
-using Sitecore.Data;
-using Sitecore.Data.Items;
+﻿using System;
 using Sitecore.Diagnostics;
+using Glass.Mapper.Sc;
+using SitecoreDev.Feature.Articles.Models;
 
 namespace SitecoreDev.Feature.Articles.Repositories
 {
   public class SitecoreArticlesRepository : IArticlesRepository
   {
-    private Database _database;
+    private readonly ISitecoreContext _sitecoreContext;
+
     public SitecoreArticlesRepository()
     {
-      _database = Context.Database;
+      _sitecoreContext = new SitecoreContext();
     }
-    public Item GetArticleContent(string contentGuid)
+
+    public IArticle GetArticleContent(string contentGuid)
     {
       Assert.ArgumentNotNullOrEmpty(contentGuid, "contentGuid");
-      return _database.GetItem(ID.Parse(contentGuid));
-    }
+      return _sitecoreContext.GetItem<IArticle>(Guid.Parse(contentGuid));
+    } 
   }
 }

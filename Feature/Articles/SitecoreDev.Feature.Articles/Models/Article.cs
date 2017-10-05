@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace SitecoreDev.Feature.Articles.Models
 {
   public class Article : IArticle
   {
-    public string Id { get; set; }
-    public string Title { get; set; }
-    public string Body { get; set; }
+    public Guid Id { get; set; }
+    public String Title { get; set; }
+    public String Body { get; set; }
   }
 }
