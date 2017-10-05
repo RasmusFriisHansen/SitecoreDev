@@ -47,6 +47,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Articles", "Articles", "{F9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Feature.Articles", "Feature\Articles\SitecoreDev.Feature.Articles\SitecoreDev.Feature.Articles.csproj", "{BAA9B6E5-CC01-4E4E-B574-B906A234B963}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orm", "Orm", "{DC06A643-5969-4F88-B78C-34C64EEEAADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Foundation.Orm", "Foundation\Orm\SitecoreDev.Foundation.Orm\SitecoreDev.Foundation.Orm.csproj", "{F7B3ECFA-5490-47E0-B8D5-90BA9C2A61A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,10 @@ Global
 		{BAA9B6E5-CC01-4E4E-B574-B906A234B963}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAA9B6E5-CC01-4E4E-B574-B906A234B963}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAA9B6E5-CC01-4E4E-B574-B906A234B963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B3ECFA-5490-47E0-B8D5-90BA9C2A61A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B3ECFA-5490-47E0-B8D5-90BA9C2A61A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B3ECFA-5490-47E0-B8D5-90BA9C2A61A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B3ECFA-5490-47E0-B8D5-90BA9C2A61A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +97,8 @@ Global
 		{85782CF3-02DD-4281-9EFF-AF951BBAFE71} = {8FE756C5-CD4D-4029-AF90-984971802050}
 		{F980D6FB-EB8C-4BE9-976F-B425C3830BCB} = {DB87301D-B213-48E5-B0EB-E20FAD6F749C}
 		{BAA9B6E5-CC01-4E4E-B574-B906A234B963} = {F980D6FB-EB8C-4BE9-976F-B425C3830BCB}
+		{DC06A643-5969-4F88-B78C-34C64EEEAADC} = {F8FA8853-987D-4CB6-A97C-34759BB477C5}
+		{F7B3ECFA-5490-47E0-B8D5-90BA9C2A61A0} = {DC06A643-5969-4F88-B78C-34C64EEEAADC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C824447-3A3F-478D-B9D6-185F4AC98334}
