@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BAA9B6E5-CC01-4E4E-B574-B906A234B963}</ProjectGuid>
+    <ProjectGuid>{2F8343DB-EE88-4B42-BCFD-5515754B99FB}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SitecoreDev.Feature.Articles</RootNamespace>
-    <AssemblyName>SitecoreDev.Feature.Articles</AssemblyName>
+    <RootNamespace>SitecoreDev.Foundation.Repository</RootNamespace>
+    <AssemblyName>SitecoreDev.Foundation.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -50,13 +50,8 @@
     <Reference Include="Glass.Mapper, Version=4.4.0.199, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Glass.Mapper.Sc.Core.4.4.0.199\lib\net45\Glass.Mapper.dll</HintPath>
     </Reference>
-    <Reference Include="Glass.Mapper.Sc, Version=4.4.0.199, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Glass.Mapper.Sc">
       <HintPath>..\..\..\packages\Glass.Mapper.Sc.Core.4.4.0.199\lib\100\Glass.Mapper.Sc.dll</HintPath>
-    </Reference>
-    <Reference Include="Glass.Mapper.Sc.Mvc, Version=4.4.0.199, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Glass.Mapper.Sc.Core.4.4.0.199\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -89,67 +84,26 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Web.Razor">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Webpages">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Webpages.Deployment">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Webpages.Razor">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Helpers">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure">
-      <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Controllers\ArticlesController.cs" />
-    <Compile Include="Models\Article.cs" />
-    <Compile Include="Models\BlogComment.cs" />
-    <Compile Include="Models\Configuration\IArticleMap.cs" />
-    <Compile Include="Models\IArticle.cs" />
-    <Compile Include="Models\IComment.cs" />
-    <Compile Include="Pipelines\InitializeContainer\RegisterDependencies.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\FakeBlogCommentRepository.cs" />
-    <Compile Include="Repositories\ICommentRepository.cs" />
-    <Compile Include="Services\BlogCommentService.cs" />
-    <Compile Include="Services\ICommentService.cs" />
-    <Compile Include="Services\IContentService.cs" />
-    <Compile Include="Services\SitecoreContentService.cs" />
-    <Compile Include="ViewModels\BlogPostViewModel.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\web.config" />
-    <Content Include="App_Config\Include\Feature\Feature.Articles.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Repository.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Articles\BlogPost.cshtml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\IoC\SitecoreDev.Foundation.IoC\SitecoreDev.Foundation.Ioc.csproj">
+    <Compile Include="Content\IContentRepository.cs" />
+    <Compile Include="Content\SitecoreContentRepository.cs" />
+    <Compile Include="Pipelines\InitializeContainer\RegisterDependencies.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IoC\SitecoreDev.Foundation.IoC\SitecoreDev.Foundation.Ioc.csproj">
       <Project>{9daa3b4a-7450-427f-b1f9-45bb85bf9b2b}</Project>
       <Name>SitecoreDev.Foundation.Ioc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Model\SitecoreDev.Foundation.Model\SitecoreDev.Foundation.Model.csproj">
-      <Project>{154DAD14-48EF-488D-B7F0-F8492F2492D1}</Project>
+    <ProjectReference Include="..\..\Model\SitecoreDev.Foundation.Model\SitecoreDev.Foundation.Model.csproj">
+      <Project>{154dad14-48ef-488d-b7f0-f8492f2492d1}</Project>
       <Name>SitecoreDev.Foundation.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Repository\SitecoreDev.Foundation.Repository\SitecoreDev.Foundation.Repository.csproj">
-      <Project>{2f8343db-ee88-4b42-bcfd-5515754b99fb}</Project>
-      <Name>SitecoreDev.Foundation.Repository</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -163,9 +117,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53030</DevelopmentServerPort>
+          <DevelopmentServerPort>63185</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53030/</IISUrl>
+          <IISUrl>http://localhost:63185/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

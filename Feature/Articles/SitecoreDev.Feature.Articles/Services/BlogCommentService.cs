@@ -9,9 +9,9 @@ namespace SitecoreDev.Feature.Articles.Services
   {
     private readonly ICommentRepository _repository;
 
-    public BlogCommentService()
+    public BlogCommentService(ICommentRepository repository)
     {
-      _repository = new FakeBlogCommentRepository();
+      _repository = repository;
     }
 
     public IEnumerable<IComment> GetComments(string blogId)

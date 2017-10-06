@@ -1,20 +1,18 @@
 ﻿using SitecoreDev.Feature.Articles.Models;
-using SitecoreDev.Feature.Articles.Repositories;
+using SitecoreDev.Foundation.Repository.Content;
 
 namespace SitecoreDev.Feature.Articles.Services
 {
   public class SitecoreContentService : IContentService
   {
-    private readonly IArticlesRepository _repository;
-
-    public SitecoreContentService()
+    private readonly IContentRepository _repository;
+    public SitecoreContentService(IContentRepository repository)
     {
-      _repository = new SitecoreArticlesRepository();
+      _repository = repository;
     }
-
     public IArticle GetArticleContent(string contentGuid)
     {
-      return _repository.GetArticleContent(contentGuid);
+      return _repository.GetContentItem<IArticle>(contentGuid);
     }
   }
 }

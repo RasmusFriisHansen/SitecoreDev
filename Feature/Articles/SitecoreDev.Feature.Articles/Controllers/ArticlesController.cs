@@ -10,10 +10,10 @@ namespace SitecoreDev.Feature.Articles.Controllers
   {
     private readonly IContentService _contentService;
     private readonly ICommentService _commentService;
-    public ArticlesController()
+    public ArticlesController(IContentService contentService, ICommentService commentService)
     {
-      _contentService = new SitecoreContentService();
-      _commentService = new BlogCommentService();
+      _contentService = contentService;
+      _commentService = commentService;
     }
     public ViewResult BlogPost()
     {
