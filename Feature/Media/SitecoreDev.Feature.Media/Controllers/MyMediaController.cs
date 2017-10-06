@@ -2,17 +2,17 @@
 using System.Web.Mvc;
 using Sitecore.Data.Items;
 using Sitecore.Mvc.Presentation;
-using Sitecore.Mvc.Controllers;
 using Sitecore.Data.Fields;
 using Sitecore.Resources.Media;
 using SitecoreDev.Feature.Media.Repositories;
 using SitecoreDev.Feature.Media.ViewModels;
+
 namespace SitecoreDev.Feature.Media.Controllers
 {
-  public class MediaController : SitecoreController
+  public class MyMediaController : Controller
   {
     private readonly IMediaRepository _repository;
-    public MediaController()
+    public MyMediaController()
     {
       _repository = new SitecoreMediaRepository();
     }
