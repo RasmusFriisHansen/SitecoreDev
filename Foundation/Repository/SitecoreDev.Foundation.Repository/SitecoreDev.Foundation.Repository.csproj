@@ -91,6 +91,8 @@
   <ItemGroup>
     <Compile Include="Content\IContentRepository.cs" />
     <Compile Include="Content\SitecoreContentRepository.cs" />
+    <Compile Include="Context\IContextWrapper.cs" />
+    <Compile Include="Context\SitecoreContextWrapper.cs" />
     <Compile Include="Pipelines\InitializeContainer\RegisterDependencies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

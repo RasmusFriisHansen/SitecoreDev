@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SitecoreDev.Foundation.Model
 {
-   public interface ICmsEntity
-   {
-      Guid Id { get; }
-   }
+  public class CmsEntity : ICmsEntity
+  {
+    public Guid Id { get; set; }
+  }
 }
