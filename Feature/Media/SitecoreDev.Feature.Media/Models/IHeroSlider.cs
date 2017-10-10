@@ -3,8 +3,8 @@ using SitecoreDev.Foundation.Model;
 
 namespace SitecoreDev.Feature.Media.Models
 {
-   public interface IHeroSlider : ICmsEntity
-   {
-      IEnumerable<IHeroSliderSlide> Slides { get; set; }
-   }
+  public interface IHeroSlider : ICmsEntity
+  {
+    IEnumerable<IHeroSliderSlide> Slides { get; set; }
+  }
 }

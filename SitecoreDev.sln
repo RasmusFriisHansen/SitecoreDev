@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore", "Sitecore", "{A5
 	ProjectSection(SolutionItems) = preProject
 		..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Kernel.dll = ..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Kernel.dll
 		..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Mvc.dll = ..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Mvc.dll
+		..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Mvc.ExperienceEditor.dll = ..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Mvc.ExperienceEditor.dll
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{86F1F477-9B20-4963-88F2-B81B41CDECF6}"

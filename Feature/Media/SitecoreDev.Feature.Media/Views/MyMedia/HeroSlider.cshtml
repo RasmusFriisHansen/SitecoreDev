@@ -1,22 +1,53 @@
 ﻿@model SitecoreDev.Feature.Media.ViewModels.HeroSliderViewModel
-  @if (Model.HasImages)
+@if (Model.HasImages)
+{
+  if (Model.IsInExperienceEditorMode)
   {
-    if (Model.IsInExperienceEditorMode)
-    {
-      foreach (var image in Model.HeroImages)
-       {
-         <div class="item imageContainer">
-           @image.Image
-         </div>
-       }
-    }
-    else
-    {
-      foreach (var image in Model.HeroImages)
+    <div>
+      @foreach (var image in Model.HeroImages)
       {
-        <div class="item @(image.IsActive ? "active" : "")">
-          @image.Image
+        <div class="item imageContainer">
+          <img src="@image.MediaUrl" alt="@image.AltText" />
+          <!-- This button opens the Field Editor dialog to edit the field
+          specified in our Edit Hero Image command -->
+          <a href="#" class="btn btn-default editButton" onclick="javascript:Sitecore.PageModes.PageEditor.postRequest('webedit:fieldeditor(id=@(image.Id),fields=Image,command={19F37115-C98E-4EEE-9C2B-5FA732D14F03})')">Edit Image</a>
         </div>
       }
+    </div>
+    <div style="clear:both;">
+      <!-- This button calls the webedit:new command to add a
+      new Item to the content tree -->
+      <a href="#" class="btn btn-default" onclick="javascript:Sitecore.PageModes.PageEditor.postRequest('webedit:new(id=@(Model.ParentGuid))')">Add new image</a>
+    </div>
+  }
+  else
+  {
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        @for (int i = 0; i < Model.ImageCount; i++)
+        {
+          <li data-target="#myCarousel" data-slide-to="@i" class="@(Model.
+                                                                      HeroImages[i].IsActive ? "active" : "")"></li>
+        }
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        @foreach (var image in Model.HeroImages)
+        {
+          <div class="item @(image.IsActive ? "active" : "")">
+            <img src="@image.MediaUrl" alt="@image.AltText" />
+          </div>
+        }
+      </div>
+    </div>
+    if (Model.IsSliderIntervalSet)
+    {
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $("#myCarousel").carousel({
+            interval: @(Model.SlideInterval),
+          });
+        });
+      </script>
     }
   }
+}

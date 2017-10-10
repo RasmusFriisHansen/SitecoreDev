@@ -8,8 +8,7 @@ namespace SitecoreDev.Feature.Articles.Pipelines.InitializeContainer
   {
     public void Process(InitializeContainerArgs args)
     {
-      args.Container.Register<ICommentRepository,
-        FakeBlogCommentRepository>();
+      args.Container.Register<ICommentRepository, FakeBlogCommentRepository>();
       args.Container.Register<ICommentService, BlogCommentService>();
       args.Container.Register<IContentService, SitecoreContentService>();
     }

@@ -151,6 +151,10 @@
       <Project>{154DAD14-48EF-488D-B7F0-F8492F2492D1}</Project>
       <Name>SitecoreDev.Foundation.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Orm\SitecoreDev.Foundation.Orm\SitecoreDev.Foundation.Orm.csproj">
+      <Project>{f7b3ecfa-5490-47e0-b8d5-90ba9c2a61a0}</Project>
+      <Name>SitecoreDev.Foundation.Orm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Repository\SitecoreDev.Foundation.Repository\SitecoreDev.Foundation.Repository.csproj">
       <Project>{2f8343db-ee88-4b42-bcfd-5515754b99fb}</Project>
       <Name>SitecoreDev.Foundation.Repository</Name>

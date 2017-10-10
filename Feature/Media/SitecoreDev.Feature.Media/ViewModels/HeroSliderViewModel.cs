@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SitecoreDev.Feature.Media.Models;
 
 namespace SitecoreDev.Feature.Media.ViewModels
 {

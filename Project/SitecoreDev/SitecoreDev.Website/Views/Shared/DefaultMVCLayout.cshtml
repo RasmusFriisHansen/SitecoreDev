@@ -12,7 +12,7 @@
   <script type="text/javascript" src="~/Scripts/sitecoredev.website.min.js"></script>
   <link rel="stylesheet" href="~/Content/bootstrap.css" />
 </head>
-<body>
+<body class="@(Sitecore.Context.PageMode.IsExperienceEditor ? "edit-mode" : string.Empty)">
 <h1>@Html.Sitecore().Field("title")</h1>
 <div>
   @Html.Sitecore().Placeholder("main")
