@@ -134,10 +134,17 @@
     <None Include="packages.config" />
     <Content Include="Views\Articles\BlogPost.cshtml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\IoC\SitecoreDev.Foundation.IoC\SitecoreDev.Foundation.Ioc.csproj">
-      <Project>{9daa3b4a-7450-427f-b1f9-45bb85bf9b2b}</Project>
+    <ProjectReference Include="..\..\..\Foundation\Ioc\SitecoreDev.Foundation.Ioc\SitecoreDev.Foundation.Ioc.csproj">
+      <Project>{55ba613f-ef47-4cda-a54c-71438272e122}</Project>
       <Name>SitecoreDev.Foundation.Ioc</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Model\SitecoreDev.Foundation.Model\SitecoreDev.Foundation.Model.csproj">

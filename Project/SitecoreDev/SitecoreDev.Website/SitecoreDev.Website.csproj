@@ -127,8 +127,40 @@
     <Content Include="Views\Shared\DefaultMVCLayout.cshtml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Ioc\SitecoreDev.Foundation.Ioc\SitecoreDev.Foundation.Ioc.csproj">
+      <Project>{55ba613f-ef47-4cda-a54c-71438272e122}</Project>
+      <Name>SitecoreDev.Foundation.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Model\SitecoreDev.Foundation.Model\SitecoreDev.Foundation.Model.csproj">
+      <Project>{154dad14-48ef-488d-b7f0-f8492f2492d1}</Project>
+      <Name>SitecoreDev.Foundation.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Orm\SitecoreDev.Foundation.Orm\SitecoreDev.Foundation.Orm.csproj">
+      <Project>{f7b3ecfa-5490-47e0-b8d5-90ba9c2a61a0}</Project>
+      <Name>SitecoreDev.Foundation.Orm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Repository\SitecoreDev.Foundation.Repository\SitecoreDev.Foundation.Repository.csproj">
+      <Project>{2f8343db-ee88-4b42-bcfd-5515754b99fb}</Project>
+      <Name>SitecoreDev.Foundation.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\SitecoreDev.Foundation.SitecoreExtensions\SitecoreDev.Foundation.SitecoreExtensions.csproj">
+      <Project>{2383ba61-dcd5-4a1a-beb4-ea2fd99e27d3}</Project>
+      <Name>SitecoreDev.Foundation.SitecoreExtensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Styles\SitecoreDev.Foundation.Styles\SitecoreDev.Foundation.Styles.csproj">
+      <Project>{19b06c3f-abbe-4c37-b8d8-266cf7beb1f5}</Project>
+      <Name>SitecoreDev.Foundation.Styles</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

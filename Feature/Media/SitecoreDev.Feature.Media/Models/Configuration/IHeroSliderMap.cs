@@ -2,15 +2,15 @@
 
 namespace SitecoreDev.Feature.Media.Models.Configuration
 {
-   public class IHeroSliderMap : SitecoreGlassMap<IHeroSlider>
-   {
-      public override void Configure()
+  public class IHeroSliderMap : SitecoreGlassMap<IHeroSlider>
+  {
+    public override void Configure()
+    {
+      Map(config =>
       {
-         Map(config =>
-         {
-            config.AutoMap();
-            config.Id(f => f.Id);
-         });
-      }
-   }
+        config.AutoMap();
+        config.Id(f => f.Id);
+      });
+    }
+  }
 }
