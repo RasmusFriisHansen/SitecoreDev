@@ -19,7 +19,6 @@ namespace SitecoreDev.Feature.Media.Controllers
   {
     private readonly IContextWrapper _contextWrapper;
     private readonly IMediaContentService _mediaContentService;
-    private readonly IGlassHtml _glassHtml;
 
     public MyMediaController(IContextWrapper contextWrapper, IMediaContentService mediaContentService)
     {
@@ -32,8 +31,8 @@ namespace SitecoreDev.Feature.Media.Controllers
       var viewModel = new HeroSliderViewModel();
       if (!String.IsNullOrEmpty(RenderingContext.Current.Rendering.DataSource))
       {
-        var contentItem = _mediaContentService.GetHeroSliderContent(
-          RenderingContext.Current.Rendering.DataSource);
+        var contentItem = _mediaContentService.GetHeroSliderContent(RenderingContext.Current.Rendering.DataSource);
+
         foreach (var slide in contentItem?.Slides)
         {
           viewModel.HeroImages.Add(new HeroSliderImageViewModel()
@@ -47,8 +46,7 @@ namespace SitecoreDev.Feature.Media.Controllers
         firstItem.IsActive = true;
         viewModel.ParentGuid = contentItem.Id.ToString();
       }
-      var parameterValue = _contextWrapper.GetParameterValue(
-        "Slide Interval in Milliseconds");
+      var parameterValue = _contextWrapper.GetParameterValue("Slide Interval in Milliseconds");
       int interval = 0;
       if (int.TryParse(parameterValue, out interval))
         viewModel.SlideInterval = interval;

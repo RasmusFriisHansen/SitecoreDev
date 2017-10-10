@@ -13,7 +13,6 @@ namespace SitecoreDev.Foundation.Repository.Context
         value = parameters[key];
       return value;
     }
-
     public bool IsExperienceEditor
     {
       get
@@ -22,5 +21,6 @@ namespace SitecoreDev.Foundation.Repository.Context
           IsExperienceEditor;
       }
     }
+    public string Datasource => RenderingContext.Current.Rendering.DataSource;
   }
 }
