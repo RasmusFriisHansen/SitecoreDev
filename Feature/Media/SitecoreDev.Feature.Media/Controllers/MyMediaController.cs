@@ -42,8 +42,8 @@ namespace SitecoreDev.Feature.Media.Controllers
             AltText = slide.Image?.Alt
           });
         }
-        var firstItem = viewModel.HeroImages.FirstOrDefault();
-        firstItem.IsActive = true;
+        //var firstItem = viewModel.HeroImages.FirstOrDefault();
+        //firstItem.IsActive = true;
         viewModel.ParentGuid = contentItem.Id.ToString();
       }
       var parameterValue = _contextWrapper.GetParameterValue("Slide Interval in Milliseconds");

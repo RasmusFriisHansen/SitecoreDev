@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore", "Sitecore", "{A5
 	ProjectSection(SolutionItems) = preProject
 		libs\Sitecore\Lucene.Net.dll = libs\Sitecore\Lucene.Net.dll
 		libs\Sitecore\Sitecore.Analytics.dll = libs\Sitecore\Sitecore.Analytics.dll
+		..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.ContentSearch.dll = ..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.ContentSearch.dll
+		..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.ContentSearch.Linq.dll = ..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.ContentSearch.Linq.dll
 		..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Kernel.dll = ..\..\inetpub\wwwroot\Sitecore8\Website\bin\Sitecore.Kernel.dll
 		libs\Sitecore\Sitecore.Kernel.dll = libs\Sitecore\Sitecore.Kernel.dll
 		libs\Sitecore\Sitecore.Logging.dll = libs\Sitecore\Sitecore.Logging.dll
@@ -71,6 +73,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Foundation.Ioc"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Feature.Media.Tests", "Feature\Media\SitecoreDev.Feature.Media.Tests\SitecoreDev.Feature.Media.Tests\SitecoreDev.Feature.Media.Tests.csproj", "{126D6E07-90F6-47ED-97B4-76E6BF2F0986}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Indexing", "Indexing", "{04D5E2A6-DCC8-4650-AA26-185C42B52A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Foundation.Index", "Foundation\Indexing\SitecoreDev.Foundation.Index\SitecoreDev.Foundation.Index\SitecoreDev.Foundation.Index.csproj", "{9521B3AD-8D53-4FD5-B77C-15904F3A5348}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{77A2902C-8779-4BFA-BBAA-E96E34F51D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreDev.Feature.Search", "Feature\Search\SitecoreDev.Feature.Search\SitecoreDev.Feature.Search\SitecoreDev.Feature.Search.csproj", "{41EA6F93-1336-482A-A020-164596083B6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +127,14 @@ Global
 		{126D6E07-90F6-47ED-97B4-76E6BF2F0986}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{126D6E07-90F6-47ED-97B4-76E6BF2F0986}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{126D6E07-90F6-47ED-97B4-76E6BF2F0986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9521B3AD-8D53-4FD5-B77C-15904F3A5348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9521B3AD-8D53-4FD5-B77C-15904F3A5348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9521B3AD-8D53-4FD5-B77C-15904F3A5348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9521B3AD-8D53-4FD5-B77C-15904F3A5348}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41EA6F93-1336-482A-A020-164596083B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41EA6F93-1336-482A-A020-164596083B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41EA6F93-1336-482A-A020-164596083B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41EA6F93-1336-482A-A020-164596083B6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +160,10 @@ Global
 		{53D6AE11-57E0-4BB2-B815-9C393155C72F} = {F8FA8853-987D-4CB6-A97C-34759BB477C5}
 		{55BA613F-EF47-4CDA-A54C-71438272E122} = {53D6AE11-57E0-4BB2-B815-9C393155C72F}
 		{126D6E07-90F6-47ED-97B4-76E6BF2F0986} = {8FE756C5-CD4D-4029-AF90-984971802050}
+		{04D5E2A6-DCC8-4650-AA26-185C42B52A9C} = {F8FA8853-987D-4CB6-A97C-34759BB477C5}
+		{9521B3AD-8D53-4FD5-B77C-15904F3A5348} = {04D5E2A6-DCC8-4650-AA26-185C42B52A9C}
+		{77A2902C-8779-4BFA-BBAA-E96E34F51D11} = {DB87301D-B213-48E5-B0EB-E20FAD6F749C}
+		{41EA6F93-1336-482A-A020-164596083B6E} = {77A2902C-8779-4BFA-BBAA-E96E34F51D11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C824447-3A3F-478D-B9D6-185F4AC98334}

@@ -9,7 +9,7 @@ namespace SitecoreDev.Foundation.Orm.Pipelines.InitializeContainer
     {
       args.Container.Register<ISitecoreContext>(() =>
         new SitecoreContext(), Lifestyle.Transient);
-      args.Container.Register<IGlassHtml, GlassHtml>();
+      //args.Container.Register<IGlassHtml, GlassHtml>();
     }
   }
 }

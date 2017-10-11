@@ -22,5 +22,6 @@ namespace SitecoreDev.Foundation.Repository.Context
       }
     }
     public string Datasource => RenderingContext.Current.Rendering.DataSource;
+    public string CurrentItemPath => Sitecore.Context.Item.Paths.FullPath;
   }
 }
