@@ -4,9 +4,9 @@ namespace SitecoreDev.Foundation.Repository.Context
 {
   public interface IContextWrapper
   {
-    string GetParameterValue(string key);
-    bool IsExperienceEditor { get; }
     string Datasource { get; }
+    bool IsExperienceEditor { get; }
     string CurrentItemPath { get; }
+    string GetParameterValue(string key);
   }
 }

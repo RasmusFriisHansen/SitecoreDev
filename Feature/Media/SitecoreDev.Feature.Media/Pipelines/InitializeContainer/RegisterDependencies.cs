@@ -10,7 +10,6 @@ namespace SitecoreDev.Feature.Media.Pipelines.InitializeContainer
     public void Process(InitializeContainerArgs args)
     {
       args.Container.Register<IMediaContentService, SitecoreMediaContentService>();
-      args.Container.Register<IContextWrapper, SitecoreContextWrapper>();
       args.Container.Register<IGlassHtml, GlassHtml>();
     }
   }

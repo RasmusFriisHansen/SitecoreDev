@@ -11,7 +11,7 @@ namespace SitecoreDev.Foundation.Repository.Pipelines.InitializeContainer
     {
       args.Container.Register<IContentRepository,SitecoreContentRepository>();
       args.Container.Register<ISearchRepository, SitecoreSearchRepository>();
-      //args.Container.Register<IContextWrapper, SitecoreContextWrapper>();
+      args.Container.Register<IContextWrapper, SitecoreContextWrapper>();
     }
   }
 }

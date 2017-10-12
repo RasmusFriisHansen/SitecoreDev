@@ -1,0 +1,11 @@
+﻿@model SitecoreDev.Feature.Search.ViewModels.SearchResultsViewModel
+@foreach (var result in Model.Results)
+{
+  <div style="width:300px;">
+    <div style="float:left;width:200px;">@result.Title</div>
+    <div style="float:right;width:100px;text-align:center">
+      <a href="@result.Url">View</a>
+    </div>
+  </div>
+}
+

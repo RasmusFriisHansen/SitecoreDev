@@ -19,40 +19,43 @@ namespace SitecoreDev.Feature.Media.Controllers
   {
     private readonly IContextWrapper _contextWrapper;
     private readonly IMediaContentService _mediaContentService;
+    private readonly IGlassHtml _glassHtml;
 
-    public MyMediaController(IContextWrapper contextWrapper, IMediaContentService mediaContentService)
+    public MyMediaController(IContextWrapper contextWrapper, IMediaContentService mediaContentService, IGlassHtml glassHtml)
     {
       _contextWrapper = contextWrapper;
       _mediaContentService = mediaContentService;
+      _glassHtml = glassHtml;
     }
 
     public ViewResult HeroSlider()
     {
       var viewModel = new HeroSliderViewModel();
-      if (!String.IsNullOrEmpty(RenderingContext.Current.Rendering.DataSource))
-      {
-        var contentItem = _mediaContentService.GetHeroSliderContent(RenderingContext.Current.Rendering.DataSource);
 
+      if (!String.IsNullOrEmpty(_contextWrapper.Datasource))
+      {
+        var contentItem = _mediaContentService.GetHeroSliderContent(_contextWrapper.Datasource);
         foreach (var slide in contentItem?.Slides)
         {
           viewModel.HeroImages.Add(new HeroSliderImageViewModel()
           {
-            Id = slide.Id.ToString(),
-            MediaUrl = slide.Image?.Src,
-            AltText = slide.Image?.Alt
+            Image = new HtmlString(_glassHtml.Editable<IHeroSliderSlide>(slide, i => i.Image))
           });
         }
         //var firstItem = viewModel.HeroImages.FirstOrDefault();
         //firstItem.IsActive = true;
         viewModel.ParentGuid = contentItem.Id.ToString();
       }
+
       var parameterValue = _contextWrapper.GetParameterValue("Slide Interval in Milliseconds");
+
       int interval = 0;
       if (int.TryParse(parameterValue, out interval))
         viewModel.SlideInterval = interval;
+
       viewModel.IsInExperienceEditorMode = _contextWrapper.IsExperienceEditor;
+
       return View(viewModel);
     }
-
   }
 }
